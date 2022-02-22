@@ -1,0 +1,47 @@
+
+
+Eurocode-calculator FAQ
+
+
+
+1. How do I register the product?
+
+Click on the license menu button and input your registration code in 
+the text box on the window that will pop-up. You will get a message 
+displayed that will say the registration was either successfull or
+unsuccessfull. In case it was unsuccessfull you can contact the
+support at support@eurocode-calculator.com.
+
+
+2. Why are sometimes units missing in the euations? 
+
+The equations are taken from the Eurocode standards that sometimes do 
+not specify units. So also the program does not always specify units.
+
+
+3. Why do my coefficients in the calculator not always get saved?
+
+The coefficients in the calculator do always get saved if you press the
+Calculate button and there is no error (e.g. dividing by zero or negative
+square root). The coefficients get saved accoring to the title of the
+calculator window. If you last clicked on a equation in the menu and 
+opened the calculator window the title of the calculator window will 
+have a suffix _menu appenden.
+
+If you next time click on the same equation in tab 1 and click the open
+calculator button you will hava a suffix _tab1 appenden to the title 
+of the calculator window and the coefficients will be different.
+
+
+4. Why do my notes in the calculator not always get saved?
+
+They do always get saved. The notes get saved accoring to the title of 
+the calculator window. The system for setting the title of the window is
+is described in question 3. 
+
+
+5. How do I save my equation structure in a tab?
+
+The equation structures gets saved automatically without any action 
+needed from the user. The only exception is when you delete all equations 
+from a tab, next time you open your program the tab wont be displayed.

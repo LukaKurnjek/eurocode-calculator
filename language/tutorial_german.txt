@@ -1,0 +1,95 @@
+
+
+Eurocode-Rechner Tutorial
+
+
+
+1. Registrierung des Produkts
+
+Um das Produkt zu registrieren, klicken Sie auf das Menü "License" und 
+klicken Sie auf den "Register" Knopf. Das Registrierungsfenster wird angezeigt. 
+Geben Sie Ihren Registrierungscode ein und klicken Sie auf den Knopf 
+Registrieren. Ein Popup-Fenster wird erscheinen, das Sie darüber informiert, 
+ob die Registrierung erfolgreich war.
+
+
+2. Gleichungen anzeigen
+
+Um Gleichungsnamen im linken Menüfenster anzuzeigen, klappen Sie den 
+Liste in dem Menüfenster auf mit Klick auf den Pfeil |> neben dem Eintrag 
+EC_1992 und klicken Sie dann auf den Pfeil neben dem Eintrag "Kapitel". 
+Wenn Sie den Gleichungsnamen sehen (z.B. Eq_3.3) klicken Sie darauf, 
+um die EC-Gleichung in der Mitte des Bildschirms anzuzeigen.
+
+Wenn eine Gleichung in der Liste fehlt, ist sie höchstwahrscheinlich 
+gekapselt in einer Gleichung, die eine Zahl daneben ist.
+
+
+3. Gleichungen mit Lesezeichen versehen
+
+Um eine Gleichung mit einem Lesezeichen zu versehen, müssen Sie sie in 
+der linken Menüliste eine Gleichung anklicken und dann unten links auf 
+den Knopf "Gleichung verzeichnen" klicken. Die Gleichung wird in dem 
+"Lesezeichen Gleichungen" Fenster auf der rechten Seite hinzugefügt. Um
+die Gleichung im rechten Lesezeichenfenster anzuzeigen, klicken Sie auf
+den Pfeil |> neben dem Eintrag EC_1992, um die Listestruktur aufzuklappen.
+
+Wenn Sie auf eine Gleichung klicken, die im rechten Lesezeichen Fenster 
+existiert, wird die Gleichung dupliziert und ein Suffix mit einer Zahl 
+wird dem Formelnamen hinzugefügt.
+
+Um eine Gleichung aus dem Lesezeichenfenster zu löschen, wählen Sie die 
+Gleichung in dem Lesezeichenfenster und klicken Sie auf den Knopf 
+"Gleichung löschen" unten rechts im Hauptfenster.
+
+Beim Schließen des Programms wird die Struktur in dem Lesezeichen Fenster
+gespeichert, so dass sie beim nächsten Programmstart angezeigt wird.
+
+
+4. Lesezeichen verwalten
+
+Um einen neuen Tab zu erstellen, klicken Sie auf den Knopf "Tab erstellen" 
+der unten rechts im Fenster ist. Im Lesezeichenfenster auf der rechten 
+Seite wird ein neuer Tab erstellt. Sie können maximal 20 Tabs öffnen.
+
+Um einen Tab zu löschen, klicken Sie auf das "x"-Symbol am unteren Rand 
+eines Tabs. Wenn mehr als 4 Tabs geöffnet sind, können Sie die Tabs 
+verschieben, indem Sie auf die <|>-Pfeile unten in der Tabliste klicken.
+
+Beim Beenden des Programms wird die Struktur der Tabs gespeichert, also 
+wird sie beim nächsten Programmstart angezeigt.
+
+
+5. Rechner verwalten
+
+Um den Rechner zu öffnen, wählen Sie einfach eine Gleichung aus im Menü 
+oder Lesezeichenfenster und klicken Sie auf den Knopf "Rechner öffnen". 
+Geben Sie die Parameter in dem Rechner ein und klicken Sie auf den Knopf
+"Berechnen", um die Gleichung zu berechnen. Das Ergebnis wird unten 
+angezeigt.
+
+Beim Klicken auf den "Berechnen" Knopf werden die Parameter automatisch
+gespeichert und nach einem Programmneustart wieder angezeigt.
+
+
+6. Lizenz-Menü
+
+Im Lizenzmenü können Sie das Lizenzfenster öffnen, in dem die Lizenzen 
+die für diese Software verwendet werden, angezeigt sind. Sie können auch 
+das Registrierung-Fenster öffnen, in dem Sie Ihren Lizenzschlüssel eingeben 
+können um die Software zu registrieren.
+
+
+7. Sprachmenü
+
+Um die Sprache der angezeigten Gleichungen zu ändern, klicken Sie auf 
+"Language \ Sprache" Menü und wählen Sie Ihre gewünschte Sprache aus.
+
+
+8. Hilfemenü
+
+Im Hilfemenü können Sie die FAQ (häufig gestellte Fragen), das Tutorial-
+Fenster oder das Startup-Fenster öffnen, das beim Start des Programms 
+angezeigt wird.
+
+
