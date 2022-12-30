@@ -12,17 +12,19 @@ given tab. Multiple tabs can be created.
 
 ![alt text](https://github.com/LukaKurnjek/eurocode-calculator/blob/main/data/eurocode-calculator.png)
 
-The program terminates every 15min. Registration can be performed
-via the Licens menu -> Register. Languages can be switched in the
-Language menu. A short tutorial is provided in the Help menu.
+The program terminates every 15min. Registration can be performed via
+the Licens menu -> Register. Before that you have to setup the REST API.
 
-All of the files to setup a local REST API are in the folder rest-api.
+The files to setup the local REST API are in the folder rest-api.
 Simply cd into this folder and run the following three commands:
 ```
 export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run -h 127.0.0.1 -p 3000
 ```
+
+Languages can be switched in the Language menu. A short tutorial is 
+provided in the Help menu of the calculator.
 
 Installation
 ------------
@@ -37,22 +39,22 @@ The haskell part is written in GHC version 8.10.7.
 You will need to install haskell and cabal.
 Follow insturctions for ghcup: https://www.haskell.org/ghcup/
 
-NOTE1: Do not install the haskell-platform via your package manager.
+**NOTE1:** Do not install the haskell-platform via your package manager.
 Issues can arise in the next step when installing packages with cabal.
 
-NOTE2: If you get the following error:
+**NOTE2:** If you get the following error:
 "_eghcup --cache install ghc recommended" failed!
 you either need to upgrade WSL 1 to WSL 2 if running Linux on Windows
 system. Or temporary enlarge your /tmp folder with the command:
 ```mount -o remount,size=7G /tmp/```
 
-NOTE3: When the installation finishes restart your terminal.
+**NOTE3:** When the installation finishes restart your terminal.
 
-NOTE4: To remove ghc or any other related program you can run:
+**NOTE4:** To remove ghc or any other related program you can run:
 ```ghcup rm ghc-<version>```
 
-Following haskell libraries need to be installed with cabal:
-```cabal new-install --lib http-conduit pureMD5 aeson array split sqlite-simple```
+Following haskell libraries need to be installed with cabal:<br>
+```cabal new-install --lib http-conduit pureMD5 aeson array split sqlite-simple```<br>
 NOTE: If installation of http-conduit fails try to install zlib-devel.
 
 Now you can compile the haskell code. Go to the haskel-libs folder and
