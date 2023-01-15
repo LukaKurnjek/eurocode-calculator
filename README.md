@@ -1,6 +1,6 @@
 # eurocode-calculator
 Simple calculator for predefined equations written in PyQt5 and Haskell.
-For the pure Python version look at the branch pyhthon-only.
+For the pure Python version look at the branch python-only.
 
 
 Program description
@@ -16,10 +16,10 @@ Languages can be switched in the Language menu. A short tutorial is
 provided in the Help menu of the calculator.
 
 The program terminates every 15min. Registration can be performed via
-the Licens menu -> Register. Register keys are in rest-api/keys.txt.
+the menu *Licens -> Register*. Register keys are in *rest-api/keys.txt*.
 
 Registration works only if you also setup a local REST API. You can 
-follow the procedure in the "REST API setup" chapter. 
+follow the procedure in the **REST API setup** chapter. 
 
 Setting up a local REST API is not neccessary to simply test the program.
 
@@ -35,7 +35,7 @@ it comes with the standard python installation.
 If it is not installed, you can install by using pip (python package 
 manager) which can be installed as:
 
-For Fedora: `sudo yum install python3-pip`
+For Fedora: `sudo yum install python3-pip`<br>
 For Ubuntu: `sudo apt install python3-pip`
 
 And then install PyQt5 with: `pip install PyQt5`
@@ -51,7 +51,7 @@ Following haskell libraries need to be installed with cabal:<br>
 If you get the error: `/usr/bin/ld.gold: error: cannot find -lgmp`
 install the GMP devel library.
 
-For Fedora: `sudo yum install gmp-devel`
+For Fedora: `sudo yum install gmp-devel`<br>
 For Ubuntu: `sudo apt-get install libgmp3-dev`
 
 If you get the error message `cabal: Failed to build zlib-0.6.3.0`
@@ -60,13 +60,13 @@ then try to install zlib-devel package.
 Now you can compile the haskell code. Go to the haskel-libs folder and
 compile with: `ghc Main.hs`
 
-If you get the error message bellow you need to install ncurses library: 
+If you get the error message bellow you need to install ncurses library:<br>
 `/usr/bin/ld.gold: error: cannot find -ltinfo`
 
-For Fedora: `sudo yum install ncurses-compat-libs`
+For Fedora: `sudo yum install ncurses-compat-libs`<br>
 For Ubuntu: `sudo apt-get install libncurses5-dev`
 
-Then you also have to create a symbolic link as:
+Then you also have to create a symbolic link as:<br>
 `sudo ln -s /usr/lib64/libtinfo.so.5 /usr/lib64/libtinfo.so`
 
 Running the program
@@ -81,7 +81,7 @@ REST API setup
 The files to setup the local REST API are in the folder rest-api.
 First you need to install pip (python package manager).
 
-Installing pip on Fedora 36:
+Installing pip on Fedora:
 `sudo yum install python3-pip`
 
 Then you need to install Flask by using pip:
