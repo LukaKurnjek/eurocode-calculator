@@ -1,0 +1,40 @@
+
+
+production clean
+#---------------
+
+main_window:
+- QCustomTabWidget
+- MainWindow
+- Calculator
+- Notebook_window
+- ScrollPicture
+- ScrollLabel
+- License_window
+- Faq_window
+- Tutorial_window
+- Startup_window
+- Register_window
+- EN_1992_* (702 - 15 = 687)
+
+python-haskell
+#-------------
+main_window:
+- QCustomTabWidget
+- MainWindow
+- ScrollPicture
+- Startup_window
+
+calculators:
+- Notebook_window
+- Calculator
+- EN_1992_* 
+
+registration:
+- Register_window
+
+small_windows:
+- ScrollLabel
+- License_window
+- Faq_window
+- Tutorial_window
