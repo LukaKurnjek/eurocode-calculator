@@ -34,8 +34,7 @@ httpRequest inputParameters = do
 
 -- The host where the REST API is located.
 myHost :: BC.ByteString
-myHost = "www.eurocode-calculator.com"
---myHost = "194.77.151.238"
+myHost = "127.0.0.1"
 
 -- Function that builds the HTTP request.
 buildRequest :: BC.ByteString -> BC.ByteString -> BC.ByteString -> Request

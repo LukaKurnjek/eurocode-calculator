@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 def get_function(key):
     return_val = {"error": "No value."}
-    file = open('keys3.txt', "r")
+    file = open('keys.txt', "r")
     for line in file:
         if key in line:
             return_val = line
@@ -14,9 +14,9 @@ def get_function(key):
 
 def delete_function(key):
     return_val = {"status": "Deleted."}
-    with open("keys3.txt", "r") as f:
+    with open("keys.txt", "r") as f:
         lines = f.readlines()
-    with open("keys3.txt", "w") as f:
+    with open("keys.txt", "w") as f:
         for line in lines:
             if key not in line:
                 f.write(line)
