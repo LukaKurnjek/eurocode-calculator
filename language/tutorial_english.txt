@@ -1,0 +1,90 @@
+
+
+Eurocode-calculator tutorial
+
+
+
+1. Registration of the product
+
+To register the product click on the "License" menu and click on the 
+"Register" button. The register window will pop-up. Type in your
+registration code and click on Register button. A pop-up window will
+appear that will let you know weather the registration was successful.
+
+
+2. Displaying equations
+
+To display equation names in the left menu window, unfold the tree in
+the menu window with clicking on the arrow |> beside the EC_1992 entry 
+and then click on the arrow beside the "Chapter" entry. When you see the 
+equation names (e.g. Eq_3.3) click on it to display the EC equation in 
+the middle of the screen.
+
+If an equation is missing in the list it is most likely encapsulated in 
+an equation that has a number beside it.
+
+
+3. Bookmarking equations
+
+To bookmark an equation you need to click on it in the left menu tree
+and then click the "Bookmark equation" button at the bottom left side 
+of the main window. The equation gets added to the right-side bookmark 
+tree window. To see the equation in the right bookmark window click on 
+the arrow |> beside the EC_1992 entry to unfold the tree structure.
+
+If clicking on a equation that alleary existi in the right-side bookmark 
+tree window the equation gets duplicated and a suffix with a number gets
+added to the equation name.
+
+To delete and equation from the bookmark window, select the equation in
+the bookmark tree window and click on the "Delete equation" button at 
+the bottom right side of the main window. 
+
+When closing the program the strucuture of bookmarks gets saved, so it
+gets displayed next time the program is started.
+
+
+4. Managing tabs
+
+To create a new tab click on the "Create tab" button located at the 
+bottom right side of the window. A new tab gets created on the right
+side of the Bookmark tree window. You can open a maximum of 20 tabs.
+
+To delete a tab click on the "x" icon, located at the bottom of a tab.
+When more than 4 tabs are opened you can shift the tab bar by clicking
+on the <|> arrows at the bottom of the tab bar.
+
+When closing the program the strucuture of tabs gets saved, so it gets
+displayed next time the program is started.
+
+
+5. Managing calculator
+
+To open a calculator simply select an equation from the menu or the
+bookmark window and click on the "Open calculator" button. Input the
+parameters into the calculator and click on the "Calculate" button to
+calculate the equation. The result gets displayed at the bottom.
+
+When clicking on the "Calculate button" the parameters get automaticaly
+saved and are displayed after a program restart.
+
+
+6. License menu
+
+In the license menu you can open the license window where the licenses 
+used for this software are displayed. You can also open the register
+window, where you can input your license key and register the software.
+
+
+7. Language menu
+
+To change the language of the displayed equations click on the "Language
+\ Sprache" menu button and chose your desired language.
+
+
+8. Help menu
+
+In the help menu you can open the FAQ, tutorial window or the startup
+window, which is shown upon startup of the programm.
+
+
