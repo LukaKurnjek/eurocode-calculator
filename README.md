@@ -1,7 +1,4 @@
 # eurocode-calculator
-This branch is under maintainance and the code does currently not work.
+This branch contains the same code as the branch python-single-file only the python code here is distrubute upon multiple files instead of a signle file.
 
-It contains the same code as the branch python-single-file only the python code
-there is contained in a signle file as oposed to multiple files in this branch.
-
-For program description look at the othe two existing branches.
+For program description look at the other two existing branches. 
