@@ -1,5 +1,6 @@
 # eurocode-calculator
 Simple calculator for predefined EC2 (eurocode 2) equations written in PyQt5 and Haskell.
+
 This branch contains only a handful equations as oposed to the python
 branches that contains all (more then 500) EC equations. 
 
