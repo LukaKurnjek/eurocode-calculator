@@ -1,7 +1,16 @@
 # eurocode-calculator
 Simple calculator for predefined equations written in PyQt5 and Haskell.
-For the pure Python version look at the branch python-only.
 
+For the pure Python version look at the branch python-single-file. The
+sources published on the page www.eurocode-calculator.com are compiled
+using code from this branch.
+
+There is also a branch python-only that shares the same code as the 
+python-single-file branch, where the code is distributed in multiple
+files, but the branch is currently under maintenance. 
+
+The versions on the other branches do not require registration and do
+not contain a rest-api folder. 
 
 Program description
 -------------------
