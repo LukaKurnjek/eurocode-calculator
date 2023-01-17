@@ -9,8 +9,7 @@ Eurocode-calculator FAQ
 Click on the license menu button and input your registration code in 
 the text box on the window that will pop-up. You will get a message 
 displayed that will say the registration was either successfull or
-unsuccessfull. In case it was unsuccessfull you can contact the
-support at support@eurocode-calculator.com.
+unsuccessfull. 
 
 
 2. Why are sometimes units missing in the euations? 

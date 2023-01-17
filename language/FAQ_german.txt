@@ -9,9 +9,7 @@ Eurocode-Rechner FAQ
 Klicken Sie auf den "License" Menüknopf und geben Sie Ihren 
 Registrierungscode in das Textfeld ein das im Fenster angezeigt wird. 
 Sie erhalten eine Nachricht angezeigt, die besagt, dass die Registrierung 
-entweder erfolgreich oder nicht erfolgreich war. Falls sie nicht 
-erfolgreich war, können Sie sich an den Support wenden:
-support@eurocode-calculator.com.
+entweder erfolgreich oder nicht erfolgreich war. 
 
 
 2. Warum fehlen manchmal Einheiten in den Gleichungen? 
