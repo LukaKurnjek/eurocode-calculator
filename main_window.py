@@ -63,9 +63,7 @@ class MainWindow(QMainWindow):
 
         # Settings for main window
         self.setWindowTitle("Eurocode calculator")
-        self.setMinimumSize(QSize(1350, 600))
-        #self.setMinimumSize(QSize(1340, 600))
-        
+        self.setMinimumSize(QSize(1350, 600))        
         self.setStyleSheet("background-color: lightgray;")
 
         # Create the applications menu
@@ -122,7 +120,6 @@ class MainWindow(QMainWindow):
         self.populate_tree_widget(self.menu, xmlFileString)
         
         # Setting size and connecting to itemClick signal of menu widget
-        #self.menu.setMinimumWidth(185)
         self.menu.setMinimumWidth(190)
         self.menu.setMaximumWidth(190)
         self.menu.itemClicked.connect(self.menu_clicked_item)
@@ -214,7 +211,7 @@ class MainWindow(QMainWindow):
         for layout in layout_list:
             pagelayout.addLayout(layout)
         
-        # Three main layouts
+        # Populating three main layouts
         menu_layout.addWidget(self.menu)
         #menu_layout.addWidget(self.bookmark_btn)
         
@@ -227,7 +224,7 @@ class MainWindow(QMainWindow):
         button_layout2.addWidget(self.bookmark_btn)
         button_layout2.addWidget(self.delete_btn)
 
-        # Creating tab widget
+        # Creating tabs widget
         self.tabs = QCustomTabWidget()        
         self.tabs.setTabPosition(QTabWidget.East)
         self.tabs.setMovable(True)
@@ -263,10 +260,12 @@ class MainWindow(QMainWindow):
 
         # Set the central widget of the Window.
         self.setCentralWidget(container)
-        
+            
+    # Stops the timer when the main window closes.
     def closeEvent(self, s):
         register_window.timer.stop()
-        
+
+    # Defining tab functions        
     def open_faq(self):
         faq_window.show()
         
@@ -282,7 +281,7 @@ class MainWindow(QMainWindow):
     def open_license(self):
         license_window.show()
         
-    # Displays the english equation
+    # Sets the text of the menu, main window and calculator buttons to english
     def set_english(self):
         global language
         language = "English"
@@ -564,6 +563,7 @@ class MainWindow(QMainWindow):
     def show_calculator(self):
         global current_calc, calculator_name
         
+        # Shows the calculator window only if an equation is selected
         if "Eq" in menu_window_text:
             if tree_widget_selection == "menu":
                 selected_menu_item = self.menu.currentItem()
@@ -795,6 +795,7 @@ class MainWindow(QMainWindow):
                 xmlFileString = file.read()
             self.populate_tree_widget(self.bookmark_widgets[current_tab], xmlFileString)
 
+    # Updates the globbal selected_tab parameter
     def update_current_tab(self, tab_index):
         global selected_tab
         selected_tab = opened_tabs[tab_index]
@@ -803,20 +804,6 @@ class MainWindow(QMainWindow):
             self.bookmark_widgets[selected_tab].setHeaderLabels(("Bookmarked equations",))
         elif language == "German":
             self.bookmark_widgets[selected_tab].setHeaderLabels(("Lesezeichen Gleichungen",))
-
-# Creates the application handler. Has to be first line in code out of classes.
-app = QApplication(sys.argv)
-
-# Global variables
-menu_window_text = "empty"
-current_tab = 1
-selected_tab = 1
-opened_tabs = []
-language = "English"
-tree_widget_selection = "menu"
-current_calc = ""
-calculator_name = ""
-# registered_global = False
 
 # Class for scrollable label containing picture
 class ScrollPicture(QScrollArea):
@@ -848,6 +835,7 @@ class ScrollPicture(QScrollArea):
     def setPicture(self, path):
         self.label.setPixmap(QPixmap(path))
 
+# The startup window that notifies the user of the trial version terms
 class Startup_window(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -883,7 +871,19 @@ Die Testversion des Programms wird nach 15 Minuten beendet."""
         with open("data/hide_startup", "w") as file:
             file.write(str(self.hide_window))
 
-startup_window = Startup_window()
+# Global variables
+menu_window_text = "empty"
+current_tab = 1
+selected_tab = 1
+opened_tabs = []
+language = "English"
+tree_widget_selection = "menu"
+current_calc = ""
+calculator_name = ""
+# registered_global = False
+
+# Creates the application handler. Has to be first line in code out of classes.
+app = QApplication(sys.argv)
 
 Calcs = dict()
 Calcs = {  "EN_1992-1-1_3.1": EN_1992_1_1__3_1()
@@ -1578,12 +1578,28 @@ Calcs = {  "EN_1992-1-1_3.1": EN_1992_1_1__3_1()
          , "EN_1992-4_G.3": EN_1992_4__G_3()
          }
 
+# Windows
+startup_window = Startup_window()
 main_window = MainWindow()
-main_window.show()
+main_window.show() # displays the main window
 license_window = License_window()
 tutorial_window = Tutorial_window()
 faq_window = Faq_window()
 register_window = Register_window()
 notebook_window = Notebook_window()
 
+# Function to display the startup window
+def show_startup():
+    with open("data/hide_startup", "r") as file:
+        hide_startup_txt = file.read()
+    
+    with open("data/registered_global", "r") as file:
+        registered_global_txt = file.read()
+    
+    if registered_global_txt == "False" and "False" in hide_startup_txt:
+        startup_window.show()
+
+show_startup()
+
+# Starts the event loop
 app.exec_()
