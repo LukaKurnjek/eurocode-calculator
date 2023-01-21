@@ -12,7 +12,6 @@ sys.path.insert(1, './python-libs')
 
 from calculators import *
 from small_windows import *
-from registration import *
 
 import json
 import time
@@ -73,14 +72,9 @@ class MainWindow(QMainWindow):
         help_menu = self.app_menu.addMenu("&Help")
         
         # Adding file menu buttons
-        register_action = QAction("&Register", self)
-        register_action.triggered.connect(self.open_register)
-        
         license_action = QAction("&License", self)
         license_action.triggered.connect(self.open_license)
         
-        license_menu.addAction(register_action)
-        license_menu.addSeparator()
         license_menu.addAction(license_action)
         
         # Adding language menu buttons
@@ -263,7 +257,7 @@ class MainWindow(QMainWindow):
             
     # Stops the timer when the main window closes.
     def closeEvent(self, s):
-        register_window.timer.stop()
+        pass
 
     # Defining tab functions        
     def open_faq(self):
@@ -271,9 +265,6 @@ class MainWindow(QMainWindow):
         
     def open_startup(self):
         startup_window.show()
-
-    def open_register(self):
-        register_window.show()
 
     def open_tutorial(self):
         tutorial_window.show()
@@ -288,11 +279,6 @@ class MainWindow(QMainWindow):
         
         faq_window.setWindowTitle("Frequently asked questions")
         tutorial_window.setWindowTitle("Tutorial")
-        register_window.setWindowTitle("Register")
-        
-        register_window.label.setText("Input the registration code:")
-        register_window.button.setText("Register")
-        #register_window.status_label.setText("Status:") #TODO
         
         self.bookmark_btn.setText("Bookmark equation")
         self.open_calculator_btn.setText("Open calculator")
@@ -323,11 +309,6 @@ class MainWindow(QMainWindow):
         
         faq_window.setWindowTitle("Häufig gestellte Fragen")
         tutorial_window.setWindowTitle("Tutorium")
-        register_window.setWindowTitle("Registrierung")
-        
-        register_window.label.setText("Geben Sie den Registrierungscode ein:")
-        register_window.button.setText("Registrieren")
-        #register_window.status_label.setText("Status:") #TODO
         
         self.bookmark_btn.setText("Gleichung verzeichnen")
         self.open_calculator_btn.setText("Rechner öffnen")
@@ -1585,21 +1566,7 @@ main_window.show() # displays the main window
 license_window = License_window()
 tutorial_window = Tutorial_window()
 faq_window = Faq_window()
-register_window = Register_window()
 notebook_window = Notebook_window()
-
-# Function to display the startup window
-def show_startup():
-    with open("data/hide_startup", "r") as file:
-        hide_startup_txt = file.read()
-    
-    with open("data/registered_global", "r") as file:
-        registered_global_txt = file.read()
-    
-    if registered_global_txt == "False" and "False" in hide_startup_txt:
-        startup_window.show()
-
-show_startup()
 
 # Starts the event loop
 app.exec_()
