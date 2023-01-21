@@ -4,23 +4,13 @@ Eurocode-Rechner FAQ
 
 
 
-1. Wie registriere ich das Produkt? 
-
-Klicken Sie auf den "License" Menüknopf und geben Sie Ihren 
-Registrierungscode in das Textfeld ein das im Fenster angezeigt wird. 
-Sie erhalten eine Nachricht angezeigt, die besagt, dass die Registrierung 
-entweder erfolgreich oder nicht erfolgreich war. Falls sie nicht 
-erfolgreich war, können Sie sich an den Support wenden:
-support@eurocode-calculator.com.
-
-
-2. Warum fehlen manchmal Einheiten in den Gleichungen? 
+1. Warum fehlen manchmal Einheiten in den Gleichungen? 
 
 Die Gleichungen stammen aus den Eurocode-Standards, die manchmal keine 
 Einheiten angeben. So gibt auch das Programm nicht immer Einheiten an.
 
 
-3. Warum werden meine Koeffizienten im Rechner nicht immer gespeichert? 
+2. Warum werden meine Koeffizienten im Rechner nicht immer gespeichert? 
 
 Die Koeffizienten im Rechner werden immer gespeichert, wenn Sie die Taste 
 Berechnen drücken und es keinen Fehler gibt (z.B. Dividieren durch Null 
@@ -34,14 +24,14 @@ den Rechner öffnen, werden Sie ein Suffix _tab1 im Titel vom Rechnerfenster
 sehen und die Koeffizienten werden unterschiedlich sein.
 
 
-4. Warum werden meine Notizen im Taschenrechner nicht immer gespeichert? 
+3. Warum werden meine Notizen im Taschenrechner nicht immer gespeichert? 
 
 Sie werden immer gespeichert. Die Notizen werden entsprechend dem Titel 
 vom Rechnerfenster gespeichert. Das System zum Festlegen des Fenstertitels 
 ist in Frage 3 beschrieben.
 
 
-5. Kann ich mehrere Instanzen einer Gleichung zu einem einzigen Tab hinzufügen? 
+4. Kann ich mehrere Instanzen einer Gleichung zu einem einzigen Tab hinzufügen? 
 
 Ja. Sie können mehrere Gleichungen hinzufügen und den Gleichungen werden 
 zu ihren Namen Suffixe hinzugefügt, z.B. Eq_3.1_1, Eq_3.1_2 und so weiter. 
@@ -49,7 +39,7 @@ Die Koeffizienten im Rechner werden für jede Kopie der Gleichung einzeln
 gespeichert.
 
 
-6. Wie speichere ich meine Gleichungen in einem Tab? 
+5. Wie speichere ich meine Gleichungen in einem Tab? 
 
 Die Gleichungen werden automatisch ohne Aktion vom Benutzer gespeichert. 
 Die einzige Ausnahme ist, wenn Sie alle Gleichungen in einem Tab löschen. 
