@@ -94,15 +94,10 @@ class MainWindow(QMainWindow):
         
         tutorial_action = QAction("&Tutorial", self)
         tutorial_action.triggered.connect(self.open_tutorial)
-        
-        startup_action = QAction("&Startup window", self)
-        startup_action.triggered.connect(self.open_startup)
 
         help_menu.addAction(faq_action)
         help_menu.addSeparator()
         help_menu.addAction(tutorial_action)
-        help_menu.addSeparator()
-        help_menu.addAction(startup_action)
 
         # Creating the left side menu QTreeWidget
         self.menu = QTreeWidget()
@@ -262,9 +257,6 @@ class MainWindow(QMainWindow):
     # Defining tab functions        
     def open_faq(self):
         faq_window.show()
-        
-    def open_startup(self):
-        startup_window.show()
 
     def open_tutorial(self):
         tutorial_window.show()
@@ -815,42 +807,6 @@ class ScrollPicture(QScrollArea):
     # Sets the picture to the label
     def setPicture(self, path):
         self.label.setPixmap(QPixmap(path))
-
-# The startup window that notifies the user of the trial version terms
-class Startup_window(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        
-        self.setWindowTitle("Trial version")
-        self.hide_window = False
-        
-        text = """The trial version of the program terminates after 15 minutes.\n
-Die Testversion des Programms wird nach 15 Minuten beendet."""
-        label = QLabel(text)
-        
-        check_box = QCheckBox("Hide this window upon startup.\nDieses Fenster beim Start ausblenden.")
-        check_box.stateChanged.connect(self.check_function)
-        #check_box.setCheckState(Qt.Checked)
-        
-        pagelayout = QVBoxLayout()
-        pagelayout.addWidget(label)
-        pagelayout.addWidget(check_box)
-        
-        container = QWidget()
-        container.setLayout(pagelayout)
-
-        # Set the central widget of the Window.
-        self.setCentralWidget(container)
-        
-    def check_function(self, s):
-        if s == Qt.Checked:
-            self.hide_window = True
-        else:
-            self.hide_window = False
-            
-    def closeEvent(self, s):
-        with open("data/hide_startup", "w") as file:
-            file.write(str(self.hide_window))
 
 # Global variables
 menu_window_text = "empty"
@@ -1560,7 +1516,6 @@ Calcs = {  "EN_1992-1-1_3.1": EN_1992_1_1__3_1()
          }
 
 # Windows
-startup_window = Startup_window()
 main_window = MainWindow()
 main_window.show() # displays the main window
 license_window = License_window()
