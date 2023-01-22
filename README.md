@@ -3,11 +3,11 @@ Simple calculator for predefined EC2 (eurocode 2) equations written in PyQt5.
 
 This branch contains source code for microsoft windows installer file that is 
 published on the page www.eurocode-calculator.com. The installer file can be 
-found in the executables folder.
+found in the *executable* folder.
 
 The Microsoft installer files were created with [Inno Setup](https://jrsoftware.org/isdl.php) software.
 
-The main exacutable file was created with the [PyInstaller](https://pyinstaller.org/en/stable/) packaging tool.
+The main exacutable file was created with the [PyInstaller](https://pyinstaller.org/en/stable/) packaging tool.<br>
 `pyinstaller --onefile main_window.py --noconsole`
 
 Before creating the main executable file Python 3.11 nad PyQt5 had to be installed.
