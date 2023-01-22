@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Sep 27 20:25:48 2021
+Created on Sun Jan 22 2023
 
-@author: linus
+@author: Luka Kurnjek
 """
 
 import sys
@@ -57,9 +57,7 @@ class MainWindow(QMainWindow):
 
         # Settings for main window
         self.setWindowTitle("Eurocode calculator")
-        self.setMinimumSize(QSize(1350, 600))
-        #self.setMinimumSize(QSize(1340, 600))
-        
+        self.setMinimumSize(QSize(1350, 600))        
         self.setStyleSheet("background-color: lightgray;")
 
         # Create the applications menu
@@ -71,7 +69,6 @@ class MainWindow(QMainWindow):
         # Adding file menu buttons      
         license_action = QAction("&License", self)
         license_action.triggered.connect(self.open_license)
-        
         license_menu.addAction(license_action)
         
         # Adding language menu buttons
@@ -91,15 +88,10 @@ class MainWindow(QMainWindow):
         
         tutorial_action = QAction("&Tutorial", self)
         tutorial_action.triggered.connect(self.open_tutorial)
-        
-        startup_action = QAction("&Startup window", self)
-        startup_action.triggered.connect(self.open_startup)
 
         help_menu.addAction(faq_action)
         help_menu.addSeparator()
         help_menu.addAction(tutorial_action)
-        help_menu.addSeparator()
-        help_menu.addAction(startup_action)
 
         # Creating the left side menu QTreeWidget
         self.menu = QTreeWidget()
@@ -111,7 +103,6 @@ class MainWindow(QMainWindow):
         self.populate_tree_widget(self.menu, xmlFileString)
         
         # Setting size and connecting to itemClick signal of menu widget
-        #self.menu.setMinimumWidth(185)
         self.menu.setMinimumWidth(190)
         self.menu.setMaximumWidth(190)
         self.menu.itemClicked.connect(self.menu_clicked_item)
@@ -205,7 +196,6 @@ class MainWindow(QMainWindow):
         
         # Three main layouts
         menu_layout.addWidget(self.menu)
-        #menu_layout.addWidget(self.bookmark_btn)
         
         equation_layout.addWidget(self.equation)
         equation_layout.addLayout(button_layout1)
@@ -253,14 +243,8 @@ class MainWindow(QMainWindow):
         # Set the central widget of the Window.
         self.setCentralWidget(container)
         
-    def closeEvent(self, s):
-        pass
-        
     def open_faq(self):
         faq_window.show()
-        
-    def open_startup(self):
-        startup_window.show()
 
     def open_tutorial(self):
         tutorial_window.show()
@@ -779,7 +763,8 @@ class MainWindow(QMainWindow):
             self.bookmark_widgets[selected_tab].setHeaderLabels(("Bookmarked equations",))
         elif language == "German":
             self.bookmark_widgets[selected_tab].setHeaderLabels(("Lesezeichen Gleichungen",))
-        
+
+# Class for calculator window
 class Calculator(QWidget):
     def __init__(self, parameter_count, calc_name, \
                  calc_function, result_name, result_units, \
@@ -802,8 +787,7 @@ class Calculator(QWidget):
         self.left_right_naming = left_right_naming
         
         # Setting window title and size
-        self.setMinimumSize(QSize(580, 230))
-        #self.setMinimumSize(QSize(560, 160))
+        self.setMinimumSize(QSize(580, 230)) #TEST
         
         # Setting main layouts
         pagelayout = QVBoxLayout()
@@ -973,7 +957,6 @@ class Calculator(QWidget):
             units_label2 = QLabel("")
         self.result_label2.setAlignment(Qt.AlignRight)
         
-        #TODO: rename parameters and add new
         result_layout.addWidget(self.result_parameter_name2)
         result_layout.addWidget(self.result_label2)
         result_layout.addWidget(units_label2)
@@ -1156,6 +1139,7 @@ current_calc = ""
 calculator_name = ""
 registered_global = False
 
+# Notebook window
 class Notebook_window(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -1317,43 +1301,6 @@ class Tutorial_window(QMainWindow):
         tutorial_label.setText(tutorial_text)
         
         self.setCentralWidget(tutorial_label)
-
-class Startup_window(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        
-        self.setWindowTitle("Trial version")
-        self.hide_window = False
-        
-        text = """The trial version of the program terminates after 15 minutes.\n
-Die Testversion des Programms wird nach 15 Minuten beendet."""
-        label = QLabel(text)
-        
-        check_box = QCheckBox("Hide this window upon startup.\nDieses Fenster beim Start ausblenden.")
-        check_box.stateChanged.connect(self.check_function)
-        #check_box.setCheckState(Qt.Checked)
-        
-        pagelayout = QVBoxLayout()
-        pagelayout.addWidget(label)
-        pagelayout.addWidget(check_box)
-        
-        container = QWidget()
-        container.setLayout(pagelayout)
-
-        # Set the central widget of the Window.
-        self.setCentralWidget(container)
-        
-    def check_function(self, s):
-        if s == Qt.Checked:
-            self.hide_window = True
-        else:
-            self.hide_window = False
-            
-    def closeEvent(self, s):
-        with open("data/hide_startup", "w") as file:
-            file.write(str(self.hide_window))
-
-startup_window = Startup_window()
 
 # Calculator window classes
 class EN_1992_1_1__3_1(QMainWindow):
