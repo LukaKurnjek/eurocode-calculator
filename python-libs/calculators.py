@@ -79,8 +79,7 @@ class Calculator(QWidget):
         self.left_right_naming = left_right_naming
         
         # Setting window title and size
-        self.setMinimumSize(QSize(580, 230))
-        #self.setMinimumSize(QSize(560, 160))
+        self.setMinimumSize(QSize(600, 300))
         
         # Setting main layouts
         pagelayout = QVBoxLayout()

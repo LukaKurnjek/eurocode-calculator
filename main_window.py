@@ -62,7 +62,7 @@ class MainWindow(QMainWindow):
 
         # Settings for main window
         self.setWindowTitle("Eurocode calculator")
-        self.setMinimumSize(QSize(1350, 600))        
+        self.setMinimumSize(QSize(1350, 800))        
         self.setStyleSheet("background-color: lightgray;")
 
         # Create the applications menu
@@ -109,8 +109,8 @@ class MainWindow(QMainWindow):
         self.populate_tree_widget(self.menu, xmlFileString)
         
         # Setting size and connecting to itemClick signal of menu widget
-        self.menu.setMinimumWidth(190)
-        self.menu.setMaximumWidth(190)
+        self.menu.setMinimumWidth(240)
+        self.menu.setMaximumWidth(240)
         self.menu.itemClicked.connect(self.menu_clicked_item)
         
         # Creating the equation widget that displays the .png equations
@@ -330,8 +330,8 @@ class MainWindow(QMainWindow):
         
         #self.bookmark_widgets[bookmark_key] = QTreeWidget()
         self.bookmark_widgets[bookmark_key].setHeaderLabels(("Bookmarked equations",))
-        self.bookmark_widgets[bookmark_key].setMinimumWidth(190)
-        self.bookmark_widgets[bookmark_key].setMaximumWidth(190) #TEST
+        self.bookmark_widgets[bookmark_key].setMinimumWidth(240)
+        self.bookmark_widgets[bookmark_key].setMaximumWidth(240) #TEST
         self.tabs.addTab(self.bookmark_widgets[bookmark_key], "Tab " + str(bookmark_key))
         self.bookmark_widgets[bookmark_key].itemClicked.connect(self.bookmark_clicked_item)
         
@@ -742,8 +742,8 @@ class MainWindow(QMainWindow):
         elif language == "German":
             self.bookmark_widgets[current_tab].setHeaderLabels(("Lesezeichen Gleichungen",))
         
-        self.bookmark_widgets[current_tab].setMinimumWidth(190)
-        self.bookmark_widgets[current_tab].setMaximumWidth(190) #TEST
+        self.bookmark_widgets[current_tab].setMinimumWidth(240)
+        self.bookmark_widgets[current_tab].setMaximumWidth(240) #TEST
         self.tabs.addTab(self.bookmark_widgets[current_tab], "Tab " + str(current_tab))
         self.bookmark_widgets[current_tab].itemClicked.connect(self.bookmark_clicked_item)
         
