@@ -3,8 +3,7 @@ This branch contains the same code as the branch python-single-file only the pyt
 
 For program description look at the other two existing branches. 
 
-**Distribution of classes**<br>
-#----------------------
+**Distribution of classes**<br><br>
 main_window.py:
 - QCustomTabWidget
 - MainWindow
