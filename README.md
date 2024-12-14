@@ -5,7 +5,7 @@ This branch contains only a handful equations as oposed to the python
 branches that contains all (more then 500) EC equations. 
 
 For the pure Python version look at the branch python-single-file. The
-sources published on the page www.eurocode-calculator.com are compiled
+sources published on the page [www.eurocode-calculator.com](https://web.archive.org/web/20230225134919/https://www.eurocode-calculator.com/) are compiled
 using code from this branch.
 
 There is also a branch python-only that shares the same code as the 
