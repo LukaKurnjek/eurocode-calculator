@@ -2,7 +2,7 @@
 Simple calculator for predefined EC2 (eurocode 2) equations written in PyQt5.
 
 This branch contains source code for microsoft windows installer file that is 
-published on the page www.eurocode-calculator.com. The installer file can be 
+published on the page [www.eurocode-calculator.com](https://web.archive.org/web/20230225134919/https://www.eurocode-calculator.com/). The installer file can be 
 found in the *executable* folder.
 
 The Microsoft installer files were created with [Inno Setup](https://jrsoftware.org/isdl.php) software.
